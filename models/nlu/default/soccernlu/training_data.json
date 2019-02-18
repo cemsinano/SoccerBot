@@ -22,28 +22,40 @@
         "text": "bye bye"
       },
       {
-        "intent": "author_info",
+        "intent": "leader_info",
         "entities": [
           {
             "start": 21,
-            "end": 25,
-            "value": "1984",
-            "entity": "book_name"
+            "end": 41,
+            "value": "Turkish Super League",
+            "entity": "league_name"
           }
         ],
-        "text": "Who is the author of 1984"
+        "text": "Who is the leader of Turkish Super League"
       },
       {
-        "intent": "author_info",
+        "intent": "leader_info",
         "entities": [
           {
             "start": 22,
-            "end": 31,
-            "value": "The Chess",
-            "entity": "book_name"
+            "end": 29,
+            "value": "La Liga",
+            "entity": "league_name"
           }
         ],
-        "text": "Tell me the author of The Chess"
+        "text": "Tell me the leader of La Liga"
+      },
+      {
+        "intent": "leader_info",
+        "entities": [
+          {
+            "start": 22,
+            "end": 32,
+            "value": "Bundesliga",
+            "entity": "league_name"
+          }
+        ],
+        "text": "Tell me the leader of Bundesliga"
       }
     ],
     "regex_features": [],

@@ -7,11 +7,11 @@ def train_nlu(data, configs, model_dir):
 	training_data = load_data(data)
 	trainer = Trainer(config.load(configs))
 	trainer.train(training_data)
-	model_directory = trainer.persist(model_dir, fixed_model_name = 'readernlu')
+	model_directory = trainer.persist(model_dir, fixed_model_name = 'soccernlu')
 
 def run_nlu():
-	interpreter = Interpreter.load('./models/nlu/default/readernlu')
-	print(interpreter.parse(u"I am curious about books. Tell me the author of Mother."))
+	interpreter = Interpreter.load('./models/nlu/default/soccernlu')
+	print(interpreter.parse(u"I am a Besiktas fan. Tell me who the leader is in Turkish Super League."))
 
 if __name__ == '__main__':
 	train_nlu('./data/data.json', 'config_spacy.json', './models/nlu')

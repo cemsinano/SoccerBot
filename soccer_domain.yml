@@ -1,0 +1,29 @@
+slots:
+  league_name:
+    type: text
+
+
+intents:
+ - greet
+ - goodbye
+ - leader_info
+
+entities:
+ - league_name
+
+templates:
+  utter_greet:
+    - 'Hello there! I am FootballBot. How can I help you?'
+  utter_goodbye:
+    - 'Talk to you soon.'
+    - 'Goodbye!'
+  utter_ask_league_name:
+    - 'Which league are you interested in?'
+
+
+
+actions:
+ - utter_greet
+ - utter_goodbye
+ - utter_ask_league_name
+ - action_leader_name
