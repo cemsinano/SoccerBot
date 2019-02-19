@@ -26,4 +26,4 @@ actions:
  - utter_greet
  - utter_goodbye
  - utter_ask_league_name
- - action_leader_name
+ - action_leader

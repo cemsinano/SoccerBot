@@ -15,6 +15,6 @@
     "prev_utter_greet",
     "prev_utter_goodbye",
     "prev_utter_ask_league_name",
-    "prev_action_leader_name"
+    "prev_action_leader"
   ]
 }

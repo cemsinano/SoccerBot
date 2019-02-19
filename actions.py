@@ -5,23 +5,23 @@ from __future__ import unicode_literals
 from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
 
-class ActionLeaderName(Action):
-	def name(self):
-		return 'action_leader_name'
+class ActionLeader(Action):
+    def name(self):
+        return 'action_leader'
 
-	def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain):
+
         import requests as req
-
         resp = req.get("https://projects.fivethirtyeight.com/soccer-predictions/data.json")
-
-		lig = tracker.get_slot('league_name')
-        # need to find an elegant solution to make a proper league name matching...
-        if(lig == "Turkish Super League"):
+        resp = resp.json()
+        lig = tracker.get_slot('league_name')
+        #need to find an elegant solution to make a proper league name matching...
+        if(lig == "turkish super league"):
             lig = "super-lig"
-        else if(lig == "Bundesliga" | lig == 'bundesliga'):
+        elif(lig == "Bundesliga" | lig == 'bundesliga'):
             lig = "bundesliga"
-        else if(lig == 'La Liga'):
-            lig = 'la-ligas'
+        elif(lig == 'La Liga'):
+            lig = 'la-liga'
 
         leagues = resp["leagues"]
         league = next(item for item in leagues if item["slug"] == lig)
@@ -32,6 +32,6 @@ class ActionLeaderName(Action):
         teams = resp['teams']
         team = next(item for item in teams if item["code"] == team_code)
         response = """The current leader of {} is {}.""".format(lig, team['name'])
-
-		dispatcher.utter_message(response)
-		return [SlotSet('league_name',lig)]
+        #response = """The current leader of {} is Basaksehir.""".format(lig)
+        dispatcher.utter_message(response)
+        return [SlotSet('league_name',lig)]

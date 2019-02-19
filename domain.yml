@@ -1,10 +1,10 @@
 %YAML 1.1
 ---
 actions:
-- utter_greet
+- action_leader
 - utter_goodbye
+- utter_greet
 - utter_ask_league_name
-- action_leader_name
 entities:
 - league_name
 intents:
