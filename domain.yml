@@ -1,12 +1,15 @@
 %YAML 1.1
 ---
 actions:
-- action_leader
-- utter_goodbye
 - utter_greet
 - utter_ask_league_name
+- action_leader
+- utter_ask_team_name
+- action_teaminfo
+- utter_goodbye
 entities:
 - league_name
+- team_name
 intents:
 - leader_info
 - greet
@@ -14,9 +17,13 @@ intents:
 slots:
   league_name:
     type: text
+  team_name:
+    type: text
 templates:
   utter_ask_league_name:
   - text: Which league are you interested in?
+  utter_ask_team_name:
+  - text: Which team are you interested in?
   utter_goodbye:
   - text: Talk to you soon.
   - text: Goodbye!

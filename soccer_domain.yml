@@ -1,6 +1,8 @@
 slots:
   league_name:
     type: text
+  team_name:
+    type: text
 
 
 intents:
@@ -10,6 +12,7 @@ intents:
 
 entities:
  - league_name
+ - team_name
 
 templates:
   utter_greet:
@@ -19,11 +22,14 @@ templates:
     - 'Goodbye!'
   utter_ask_league_name:
     - 'Which league are you interested in?'
-
+  utter_ask_team_name:
+    - 'Which team are you interested in?'
 
 
 actions:
  - utter_greet
  - utter_goodbye
  - utter_ask_league_name
+ - utter_ask_team_name
  - action_leader
+ - action_teaminfo

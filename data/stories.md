@@ -72,3 +72,46 @@
     - action_leader
     - slot{"league_name": "super-lig"}
 
+## Generated Story 8281086371875900206
+* greet
+    - utter_greet
+## Generated Story 2498115785303780902
+* greet
+    - utter_greet
+* leader_info{"league_name": "turkish super league"}
+    - slot{"league_name": "turkish super league"}
+    - action_leader
+    - slot{"league_name": "super-lig"}
+* leader_info{"league_name": "la liga"}
+    - slot{"league_name": "la liga"}
+    - action_leader
+    - action_leader
+
+## Generated Story 6123292839961940537
+* leader_info{"league_name": "turkish super league"}
+    - slot{"league_name": "turkish super league"}
+    - action_leader
+    - slot{"league_name": "super-lig"}
+
+## Generated Story 6876118424852534018
+* leader_info{"league_name": "la liga"}
+    - slot{"league_name": "la liga"}
+    - action_leader
+
+## Generated Story 516839076669302137
+* leader_info{"league_name": "la liga"}
+    - slot{"league_name": "la liga"}
+    - action_leader
+    - action_deactivate_form
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_deactivate_form
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_goodbye
+
+## Generated Story 6876118424852534018
+* leader_info{"league_name": "la liga"}
+    - slot{"league_name": "la liga"}
+    - action_leader
+

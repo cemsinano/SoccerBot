@@ -1,2 +1,4 @@
 ## intent:leader_info
-- leader of [turkish super league](league_name)
+- leader of [La Liga](league_name:la liga)
+- leader of [la liga](league_name)
+- leader of [la liga](league_name)
