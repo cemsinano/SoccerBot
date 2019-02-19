@@ -18,9 +18,9 @@ class ActionLeader(Action):
         #need to find an elegant solution to make a proper league name matching...
         if(lig == "turkish super league"):
             lig = "super-lig"
-        if(lig == 'bundesliga'):
+        elif(lig == 'bundesliga'):
              lig = "bundesliga"
-        if(lig == 'la liga'):
+        elif(lig == 'la liga'):
             lig = 'la-liga'
 
         leagues = resp["leagues"]

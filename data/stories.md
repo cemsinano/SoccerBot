@@ -115,3 +115,15 @@
     - slot{"league_name": "la liga"}
     - action_leader
 
+## Generated Story -3182485144792399469
+* leader_info{"league_name": "bundesliga"}
+    - slot{"league_name": "bundesliga"}
+    - action_leader
+    - slot{"league_name": "bundesliga"}
+    - action_deactivate_form
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - action_default_ask_affirmation
+* goodbye
+    - utter_goodbye
+
